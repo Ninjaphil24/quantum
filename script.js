@@ -221,6 +221,7 @@ function candlesticks(cssExport) {
             for (let arch = 0; arch < 4; arch++) {
                 document.getElementById(`logo${arch}`).classList.remove('show');
             }
+            document.getElementById(`nav0`).classList.remove('show');
 
         });
 
@@ -261,3 +262,36 @@ function candlesticks(cssExport) {
 }
 
 candlesticks(cssExport);
+
+function languages() {
+    let content = {};
+    let currentLanguage = 'en';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchContent().then(() => {
+            setContent();
+        });
+    });
+
+    async function fetchContent() {
+        const response = await fetch('data/content.json');
+        content = await response.json();
+    }
+
+    function switchLanguage() {
+        currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+        setContent();
+    }
+
+    function setContent() {
+        document.getElementById('title').textContent = content[currentLanguage].title;
+        document.getElementById('nav-home').textContent = content[currentLanguage].nav.home;
+        document.getElementById('nav-about').textContent = content[currentLanguage].nav.about;
+        document.getElementById('nav-contact').textContent = content[currentLanguage].nav.contact;
+        document.getElementById('nav-language').textContent = content[currentLanguage].nav.language;
+        document.getElementById('header').textContent = content[currentLanguage].header;
+        document.getElementById('paragraph').textContent = content[currentLanguage].paragraph;
+    }
+}
+
+languages();

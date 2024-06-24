@@ -1,7 +1,22 @@
+/* Anchor */
+/* https://youtube.com/shorts/fO0XD75u2TI?si=b2Rl12oZidntQuPY */
+
+@font-face {
+    font-family: 'MBFCannoRegular';
+    src: url('fonts/MBF%20Canno%20Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
+    font-family: 'MBFCannoRegular', sans-serif;
     height: 200vh;
     background-color: #0a245a;
     margin: 0;
+}
+
+.flex {
+    display: flex;
 }
 
 #candlestick-container {
@@ -10,7 +25,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
     align-items: baseline;
     justify-content: flex-start;
     overflow: hidden;
@@ -18,6 +32,7 @@ body {
 }
 
 #logoContainer {
+    top: 0;
     position: fixed;
     float: left;
     width: 100px;
@@ -74,4 +89,33 @@ button {
     color: #0a245a;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.titles {
+    padding: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+h1 {
+    color: gold;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: gold;
+    font-size: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+#langButton {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
+    color: gold;
 }
