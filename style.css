@@ -1,0 +1,77 @@
+body {
+    height: 200vh;
+    background-color: #0a245a;
+    margin: 0;
+}
+
+#candlestick-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#logoContainer {
+    position: fixed;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+#logo0 {
+    position: absolute;
+    top: 20px;
+    left: 11px;
+    width: 80px;
+}
+
+#logo1 {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    height: 80px;
+}
+
+#logo2 {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    height: 80px;
+}
+
+#logo3 {
+    position: absolute;
+    top: 0px;
+    left: 12px;
+}
+
+.nav {
+    /* background-color: aquamarine; */
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    width: 400px;
+    height: 500px;
+    z-index: 1;
+}
+
+button {
+    /* Make the default css of the button disappear */
+    background-color: transparent;
+    border: none;
+    color: #0a245a;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
