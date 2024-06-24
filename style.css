@@ -19,6 +19,8 @@ body {
     display: flex;
 }
 
+/* LogoNav Start */
+
 #candlestick-container {
     position: fixed;
     top: 0;
@@ -91,6 +93,8 @@ button {
     cursor: pointer;
 }
 
+/* LogoNav End */
+
 .titles {
     padding: 50px;
     flex-direction: column;
@@ -112,10 +116,163 @@ p {
     padding: 0;
 }
 
-#langButton {
+/* Language Toggle Start */
+#nav-language {
     position: fixed;
-    top: 10px;
+    top: 25px;
     right: 20px;
     z-index: 1;
-    color: gold;
+}
+
+form {
+    width: 91.5px;
+    height: 54px;
+    margin: -0.6px -0.3px;
+    border-radius: 78px;
+    background: linear-gradient(#ffbd00, #ca7900);
+    box-shadow: 0 0.15px 0.75px hsla(41, 100%, 40%, 0.3),
+                -0.45px 3.75px 3.75px hsla(41, 100%, 35%, 0.5),
+                -0.9px 7.5px 7.5px hsla(41, 100%, 30%, 0.3),
+                -1.35px 9.75px 9.75px hsla(41, 100%, 20%, 0.3);
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 91.5px;
+    height: 54px;
+    background: gold;
+    border-radius: 76.5px;
+    border: 0.75px solid transparent;
+    background-clip: padding-box;
+    cursor: pointer;
+}
+
+.toggle__wrapper, .toggle__bg {
+    width: 76.5px;
+    height: 39px;
+    margin: -0.6px -0.3px;
+    border-radius: 76.5px;
+}
+
+.toggle__wrapper {
+    background: linear-gradient(hsla(39, 100%, 44%, 1), hsla(39, 100%, 42%, 0.1));
+    box-shadow: 0 0.75px 0.15px 0 hsla(41, 100%, 57%, 0.7);
+}
+
+.toggle__bg {
+    background: linear-gradient(to right, rgb(241, 88, 6) 50%, rgb(2, 8, 174) 50% 100%);
+    background-size: 200% 100%;
+    background-position: 75%;
+    border-radius: 75px;
+    border: 0.75px solid transparent;
+    background-clip: padding-box;
+    box-shadow: inset 0px 4.5px 7.5px 2.25px hsla(0, 0%, 0%, 0.30);
+    transition: all 0.85s ease-in-out;
+}
+
+.toggle__sphere {
+    position: relative;
+    height: 35.7px;
+    width: 35.7px;
+    border-radius: 50%;
+    transform-origin: top left;
+    transform: translateY(0.15px);
+    box-shadow: 0.3px 0px 0.75px 0.15px hsla(18, 77%, 15%, 0.05),
+                0px 1.5px 1.5px 0.15px hsla(18, 77%, 15%, 0.2),
+                -0.45px 0px 0.45px 0.15px hsla(0, 0%, 0%, 0.75);
+    transition: all 0.85s ease-in-out;
+    background-size: cover;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 30%22%3E%3CclipPath id=%22t%22%3E%3Cpath d=%22M30,15v15H0V15H30zM30,15V0H0V15H30zM30,15v15H60V15H30zM30,15V0H60V15H30z%22/%3E%3C/clipPath%3E%3Cpath d=%22M0,0v30h60V0H0z%22 fill=%22%2300247D%22/%3E%3Cpath d=%22M0,0L60,30M60,0L0,30%22 stroke=%22%23FFF%22 stroke-width=%226%22/%3E%3Cpath d=%22M0,0L60,30M60,0L0,30%22 clip-path=%22url(%23t)%22 stroke=%22%23CF142B%22 stroke-width=%224%22/%3E%3Cpath d=%22M30,0v30M0,15h60%22 stroke=%22%23FFF%22 stroke-width=%2210%22/%3E%3Cpath d=%22M30,0v30M0,15h60%22 stroke=%22%23CF142B%22 stroke-width=%226%22/%3E%3C/svg%3E');
+
+}
+
+.toggle__sphere:before,
+.toggle__sphere:after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 3px);
+    height: 0.225px;
+    width: 6.3px;
+    background: hsla(0, 0%, 0%, 0.25);
+    border-radius: 60%;
+    box-shadow: 0px 0px 1.5px 0px hsla(0, 0%, 0%, 0.25);
+}
+
+.toggle__sphere:before {
+    top: -0.3px;
+}
+
+.toggle__sphere:after {
+    bottom: -0.15px;
+}
+
+.toggle__sphere-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: inset 0px -4.5px 4.5px 2.25px hsla(0, 0%, 0%, 0.1);
+}
+
+.toggle__sphere-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    transition: transform 0.85s ease-in-out;
+}
+
+.toggle__sphere-bg:before,
+.toggle__sphere-bg:after {
+    content: '';
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+/* Here */
+.toggle__sphere-bg:before {
+    background-color: hsla(213, 83%, 26%, 1);
+    border-radius: 52%;
+}
+
+.toggle__sphere-bg:after {
+    background-color: hsla(18, 100%, 62%, 1);
+    transform: rotateY(180deg);
+    border-radius: 50%;
+}
+
+input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+input:checked+.toggle__bg {
+    background-position: 27%;
+}
+
+input:checked+.toggle__bg .toggle__sphere {
+    transform: translateX(37.5px) translateY(0.15px);
+    box-shadow: -0.3px 0px 0.75px 0.15px hsla(18, 77%, 15%, 0.05),
+                0px 1.5px 1.5px 0.15px hsla(18, 77%, 15%, 0.2),
+                0.45px 0px 0.45px 0px hsla(0, 0%, 0%, 0.75);
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3"%3E%3Crect width="5" height="3" fill="%23ffce00"/%3E%3Crect width="5" height="1" y="2" fill="%23d00"/%3E%3Crect width="5" height="1" fill="%23000"/%3E%3C/svg%3E');
+}
+
+input:checked+.toggle__bg .toggle__sphere-bg {
+    transform: rotateY(180deg);
+}
+/* Language Toggle End */
+
+#line-container {
+    
 }

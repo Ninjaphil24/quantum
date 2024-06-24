@@ -263,35 +263,45 @@ function candlesticks(cssExport) {
 
 candlesticks(cssExport);
 
-function languages() {
-    let content = {};
-    let currentLanguage = 'en';
+let content = {};
+let currentLanguage = 'en';
 
-    document.addEventListener('DOMContentLoaded', () => {
-        fetchContent().then(() => {
-            setContent();
-        });
-    });
+var checkbox = document.querySelector('#nav-language input[type="checkbox"]');
+checkbox.addEventListener('click', function (event) {
+    event.stopPropagation(); // Prevent click from bubbling up
+});
 
-    async function fetchContent() {
-        const response = await fetch('data/content.json');
-        content = await response.json();
-    }
-
-    function switchLanguage() {
-        currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+document.addEventListener('DOMContentLoaded', () => {
+    fetchContent().then(() => {
         setContent();
-    }
+    });
+});
 
-    function setContent() {
-        document.getElementById('title').textContent = content[currentLanguage].title;
-        document.getElementById('nav-home').textContent = content[currentLanguage].nav.home;
-        document.getElementById('nav-about').textContent = content[currentLanguage].nav.about;
-        document.getElementById('nav-contact').textContent = content[currentLanguage].nav.contact;
-        document.getElementById('nav-language').textContent = content[currentLanguage].nav.language;
-        document.getElementById('header').textContent = content[currentLanguage].header;
-        document.getElementById('paragraph').textContent = content[currentLanguage].paragraph;
-    }
+async function fetchContent() {
+    const response = await fetch('data/content.json');
+    content = await response.json();
 }
 
-languages();
+function switchLanguage() {
+    console.log('switchLanguage');
+    currentLanguage = currentLanguage === 'en' ? 'de' : 'en';
+    console.log(currentLanguage);
+    setContent();
+}
+
+function setContent() {
+    document.getElementById('line1').textContent = content[currentLanguage].line1;
+    document.getElementById('line2').textContent = content[currentLanguage].line2;
+    document.getElementById('line3').textContent = content[currentLanguage].line3;
+    document.getElementById('line4').textContent = content[currentLanguage].line4;
+    document.getElementById('line5').textContent = content[currentLanguage].line5;
+    document.getElementById('line6').textContent = content[currentLanguage].line6;
+    document.getElementById('line7').textContent = content[currentLanguage].line7;
+    document.getElementById('line8').textContent = content[currentLanguage].line8;
+    document.getElementById('line9').textContent = content[currentLanguage].line9;
+    document.getElementById('line10').textContent = content[currentLanguage].line10;
+    document.getElementById('line11').textContent = content[currentLanguage].line11;
+    document.getElementById('line12').textContent = content[currentLanguage].line12;
+    document.getElementById('line13').textContent = content[currentLanguage].line13;
+
+}
