@@ -86,10 +86,10 @@ function navbar(cssExport) {
     let finalCss = '';
     const circleCount = 5;
     const navButtons = [
-        '<button><i class="lni lni-home"></i></button>',
-        '<button><i class="lni lni-information"></i></button>',
-        '<button><i class="lni lni-download"></i></button>',
-        '<button><i class="lni lni-envelope"></i></button>',
+        '<a href="#home"><i class="lni lni-home"></i></a>',
+        '<a href="#about"><i class="lni lni-information"></i></a>',
+        '<a><i class="lni lni-download"></i></a>',
+        '<a><i class="lni lni-envelope"></i></a>',
         '<button id="showNav"><i class="lni lni-menu"></i></button>'
     ];
 
@@ -134,7 +134,6 @@ function navbar(cssExport) {
     }
 
     document.querySelector('.circle5').addEventListener('mouseenter', () => {
-        console.log('mouseenter');
         for (let arch = 0; arch < 4; arch++) {
             document.getElementById(`logo${arch}`).classList.remove('show');
         }
@@ -236,6 +235,7 @@ function candlesticks(cssExport) {
         position: relative;
         display: inline-block;
         animation: fadeIn 0.5s ease-out;
+        opacity: 0.5;
         }`
         style.innerHTML = outer + inner;
         function addCandlesticks(upBool) {
@@ -263,45 +263,3 @@ function candlesticks(cssExport) {
 
 candlesticks(cssExport);
 
-let content = {};
-let currentLanguage = 'en';
-
-var checkbox = document.querySelector('#nav-language input[type="checkbox"]');
-checkbox.addEventListener('click', function (event) {
-    event.stopPropagation(); // Prevent click from bubbling up
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    fetchContent().then(() => {
-        setContent();
-    });
-});
-
-async function fetchContent() {
-    const response = await fetch('data/content.json');
-    content = await response.json();
-}
-
-function switchLanguage() {
-    console.log('switchLanguage');
-    currentLanguage = currentLanguage === 'en' ? 'de' : 'en';
-    console.log(currentLanguage);
-    setContent();
-}
-
-function setContent() {
-    document.getElementById('line1').textContent = content[currentLanguage].line1;
-    document.getElementById('line2').textContent = content[currentLanguage].line2;
-    document.getElementById('line3').textContent = content[currentLanguage].line3;
-    document.getElementById('line4').textContent = content[currentLanguage].line4;
-    document.getElementById('line5').textContent = content[currentLanguage].line5;
-    document.getElementById('line6').textContent = content[currentLanguage].line6;
-    document.getElementById('line7').textContent = content[currentLanguage].line7;
-    document.getElementById('line8').textContent = content[currentLanguage].line8;
-    document.getElementById('line9').textContent = content[currentLanguage].line9;
-    document.getElementById('line10').textContent = content[currentLanguage].line10;
-    document.getElementById('line11').textContent = content[currentLanguage].line11;
-    document.getElementById('line12').textContent = content[currentLanguage].line12;
-    document.getElementById('line13').textContent = content[currentLanguage].line13;
-
-}
