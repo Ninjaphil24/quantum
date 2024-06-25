@@ -22,8 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             contentDiv.innerHTML = '<h1>Error loading page</h1>';
         }
-        fetchContent();
+        setContent();
     }
     window.addEventListener('hashchange', loadContent);
     loadContent();
 });
+

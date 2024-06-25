@@ -33,3 +33,4 @@ function setContent() {
 }
 
 window.fetchContent = fetchContent;
+window.setContent = setContent;

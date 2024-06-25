@@ -153,6 +153,14 @@ function navbar(cssExport) {
         const nav = document.getElementById(`nav0`);
         nav.classList.toggle('show');
     }
+    // Create a function that hides nav when not clicking one of the circles
+    document.addEventListener('click', (event) => {
+        const nav = document.getElementById(`nav0`);
+        if (event.target !== document.querySelector('.lni-menu')) {
+            nav.classList.remove('show');
+        }
+    });
+
 }
 
 // Call navbar function with the cssExport from logo
