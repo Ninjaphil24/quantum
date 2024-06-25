@@ -110,14 +110,14 @@ function navbar(cssExport) {
             }
         `;
         initialCss += `
-            #nav0 .circle${i} { top: 10%; left: 10%; transform: translate(-50%, -50%); }
+            #nav0 .circle${i} { top: 12%; left: 40%; transform: translate(-50%, -50%); }
         `;
         const angle = (i - 1) * (60 / (circleCount - 1)) - 50; // Semi-circle from -90 to 90 degrees
         const radius = 40; // Adjust radius as needed
         const x = Math.cos(angle * Math.PI / 180) * radius;
         const y = Math.sin(angle * Math.PI / 180) * radius;
         finalCss += `
-            #nav0.show .circle${i} { top: ${40 + y}%; left: ${-15 + x}%; transform: translate(-50%, -50%); }
+            #nav0.show .circle${i} { top: ${42 + y}%; left: ${15 + x}%; transform: translate(-50%, -50%); }
         `;
     }
 
