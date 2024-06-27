@@ -10,7 +10,7 @@
 
 body {
     font-family: 'MBFCannoRegular', sans-serif;
-    height: 200vh;
+    height: 100vh;
     background-color: #0a245a;
     margin: 0;
 }
@@ -274,8 +274,14 @@ input:checked+.toggle__bg .toggle__sphere-bg {
 
 /* Call to Action start */
 #actionBtn{
+    position: fixed;
+    top: 40px;
+    /* Put it in the middle */
+    left: 50%;
+    transform: translateX(-50%);
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 
 .social-button {
@@ -406,9 +412,18 @@ input:checked+.toggle__bg .toggle__sphere-bg {
 }
 
 /* Call to Action end */
+
+/* Content Start */
 #content {
-    position: relative;
-    left: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+
+    
 
 }
 
@@ -420,3 +435,64 @@ input:checked+.toggle__bg .toggle__sphere-bg {
     color: #fff;
     
 }
+
+/* Home Content Start */
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+  }
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px);
+    transition: all 2s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hidden {
+      transition: none;
+    }
+  }
+
+  .showHome {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+
+  .charts {
+    display: flex;
+  }
+
+  .chart:nth-child(2) {
+    transition-delay: 200ms;
+  }
+  .chart:nth-child(3) {
+    transition-delay: 400ms;
+  }
+  .chart:nth-child(4) {
+    transition-delay: 600ms;
+  }
+
+  .chart {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1px;
+    margin: 0 0.5px;
+    width: 250px;
+    height: 120px;
+    transition: 1s;
+  }
+
+  .chart:hover {
+    width: 600px;
+    height: 300px;
+    transition: 1s;
+  }
+/* Home Content End */
+
+
+/* Content End */

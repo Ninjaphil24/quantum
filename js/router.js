@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 const content = await response.text();
                 contentDiv.innerHTML = content;
+                executeInlineScripts(contentDiv);
             } else {
                 contentDiv.innerHTML = '<h1>404 - Page not found</h1>';
             }
@@ -24,7 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         setContent();
     }
+
+    function executeInlineScripts(container) {
+        const scripts = container.querySelectorAll('script');
+        scripts.forEach((script) => {
+            const newScript = document.createElement('script');
+            newScript.textContent = script.textContent;
+            document.head.appendChild(newScript).parentNode.removeChild(newScript);
+        });
+    }
+
     window.addEventListener('hashchange', loadContent);
     loadContent();
 });
-

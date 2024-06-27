@@ -1,15 +1,69 @@
+<section class="hidden">
+    <div class="titles flex">
+        <h1>QUANTUM TRADING SYSTEM 24</h1>
+        <p>POWERED BY WAVE DYNAMICS LABORATORIES</p>
+    </div>
+</section>
 <div class="flex" id="line-container">
-    <div class="line" id="line1"></div>
-    <div class="line" id="line2"></div>
-    <div class="line" id="line3"></div>
-    <div class="line" id="line4"></div>
-    <div class="line" id="line5"></div>
-    <div class="line" id="line6"></div>
-    <div class="line" id="line7"></div>
-    <div class="line" id="line8"></div>
-    <div class="line" id="line9"></div>
-    <div class="line" id="line10"></div>
-    <div class="line" id="line11"></div>
-    <div class="line" id="line12"></div>
-    <div class="line" id="line13"></div>
+    <section class="hidden">
+        <div class="line" id="line1"></div>
+        <div class="charts">
+            <img class="chart" src="img/5.png" alt="TradingView Chart">
+            <img class="chart" src="img/6.png" alt="TradingView Backtest">
+        </div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line2"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line3"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line4"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line5"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line6"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line7"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line8"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line9"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line10"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line11"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line12"></div>
+    </section>
+    <section class="hidden">
+        <div class="line" id="line13"></div>
+    </section>
 </div>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        console.log('entries', entries);
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('showHome');
+            } else {
+                entry.target.classList.remove('showHome');
+            }
+            console.log(entry.target, entry.isIntersecting)
+        });
+    });
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => {
+        observer.observe(el);
+    });
+</script>
