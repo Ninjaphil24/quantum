@@ -11,7 +11,7 @@
 body {
     font-family: 'MBFCannoRegular', sans-serif;
     height: 100vh;
-    background-color: #0a245a;
+    background-color: #152878;
     margin: 0;
 }
 
@@ -102,14 +102,14 @@ button {
 }
 
 h1 {
-    color: gold;
+    color: #D8C278;
     font-size: 2rem;
     margin: 0;
     padding: 0;
 }
 
 p {
-    color: gold;
+    color: #D8C278;
     font-size: 0.5rem;
     margin: 0;
     padding: 0;
@@ -298,14 +298,14 @@ input:checked+.toggle__bg .toggle__sphere-bg {
 }
 
 .cover {
-    background-color: blue;
+    background-color: #57789D;
     transform-origin: center bottom;
     transform-style: preserve-3d;
     text-align: center;
     justify-content: center;
     align-items: center;
     z-index: 99;
-    color: #fff;
+    color: #D8C278;
 }
 
 .cover,
@@ -351,7 +351,7 @@ input:checked+.toggle__bg .toggle__sphere-bg {
     padding: 5px 40px;
     border: none;
     outline: none;
-    color: #FFF;
+    color: #D8C278;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -365,7 +365,7 @@ input:checked+.toggle__bg .toggle__sphere-bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: #305184;
     left: 0;
     top: -2px;
     border-radius: 10px;
@@ -375,8 +375,8 @@ input:checked+.toggle__bg .toggle__sphere-bg {
 .btn::before {
     content: "";
     background: linear-gradient(45deg,
-            #FF0000, #FF7300, #FFFB00, #48FF00,
-            #00FFD5, #002BFF, #FF00C8, #FF0000);
+    #D8C278, #635e4b, #26200b, #7067bb,
+            #57789D, #002BFF, #3d3187, #152878);
     position: absolute;
     top: -2px;
     left: -2px;
@@ -432,7 +432,7 @@ input:checked+.toggle__bg .toggle__sphere-bg {
     flex-direction: column;
     /* Use verdana as a font  */
     font-family: 'Verdana', sans-serif;
-    color: #fff;
+    color: #829dbb;
     
 }
 

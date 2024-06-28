@@ -23,7 +23,7 @@ function logo() {
                     width: ${size}px;
                     height: ${size}px;
                     border-radius: 50%;
-                    background-color: gold;
+                    background-color: #D8C278;
                     transition: all 1s ease;
                 }
             `;
@@ -105,7 +105,7 @@ function navbar(cssExport) {
                 width: ${size}px;
                 height: ${size}px;
                 border-radius: 50%;
-                background-color: gold;
+                background-color: #D8C278;
                 transition: all 1s ease;
             }
         `;
@@ -254,7 +254,7 @@ function candlesticks(cssExport) {
             outer.appendChild(inner);
             inner.style.height = `${height}px`;
             inner.style.top = `${topPos}px`;
-            upBool ? inner.style.background = 'pink' : inner.style.background = 'turquoise';
+            upBool ? inner.style.background = '#57789D' : inner.style.background = '#D8C278';
             container.appendChild(outer);
             setTimeout(() => {
                 inner.style.display = 'none';
