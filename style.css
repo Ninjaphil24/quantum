@@ -376,7 +376,7 @@ input:checked+.toggle__bg .toggle__sphere-bg {
     content: "";
     background: linear-gradient(45deg,
     #D8C278, #635e4b, #26200b, #7067bb,
-            #57789D, #002BFF, #3d3187, #152878);
+            #57789D, #002BFF, #3d3187, #7f8cc1);
     position: absolute;
     top: -2px;
     left: -2px;
