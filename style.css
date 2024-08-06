@@ -19,6 +19,14 @@ body {
     display: flex;
 }
 
+#scroll {
+    position: fixed;
+    color: #D8C278;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
 /* LogoNav Start */
 
 #candlestick-container {
@@ -463,6 +471,10 @@ section {
     transform: translateX(0);
   }
 
+  .line {
+    padding: 10px;
+  }
+
   .charts {
     display: flex;
   }
@@ -482,15 +494,16 @@ section {
     border-radius: 10px;
     padding: 1px;
     margin: 0 0.5px;
-    width: 250px;
+    width: 90px;
     height: 120px;
     transition: 1s;
   }
-
   .chart:hover {
-    width: 600px;
-    height: 300px;
-    transition: 1s;
+      /* Create height that is always 75% of screen height and width is always 3/4 of height*/
+    height: 75vh;
+    width: 56.25vh;
+
+        transition: 1s;
   }
 /* Home Content End */
 
