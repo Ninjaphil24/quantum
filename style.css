@@ -509,3 +509,29 @@ section {
 
 
 /* Content End */
+
+/* Write a media query for 650px width where .btn will be 10px */
+@media (max-width: 650px) {
+    .btn {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    #scroll {
+        position: fixed;
+        right: 23px;
+        left: auto;
+        transform: none;
+    }
+    #actionBtn {
+        position: fixed;
+        right: 1px;
+        left: auto;
+        transform: none;
+    }
+    .social-button{
+        width: 9rem;
+    }
+}
