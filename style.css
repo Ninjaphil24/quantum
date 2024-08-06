@@ -27,6 +27,7 @@ body {
     transform: translateX(-50%);
     z-index: 100;
 }
+
 /* LogoNav Start */
 
 #candlestick-container {
@@ -138,9 +139,9 @@ form {
     border-radius: 78px;
     background: linear-gradient(#ffbd00, #ca7900);
     box-shadow: 0 0.15px 0.75px hsla(41, 100%, 40%, 0.3),
-                -0.45px 3.75px 3.75px hsla(41, 100%, 35%, 0.5),
-                -0.9px 7.5px 7.5px hsla(41, 100%, 30%, 0.3),
-                -1.35px 9.75px 9.75px hsla(41, 100%, 20%, 0.3);
+        -0.45px 3.75px 3.75px hsla(41, 100%, 35%, 0.5),
+        -0.9px 7.5px 7.5px hsla(41, 100%, 30%, 0.3),
+        -1.35px 9.75px 9.75px hsla(41, 100%, 20%, 0.3);
 }
 
 .toggle {
@@ -156,7 +157,8 @@ form {
     cursor: pointer;
 }
 
-.toggle__wrapper, .toggle__bg {
+.toggle__wrapper,
+.toggle__bg {
     width: 76.5px;
     height: 39px;
     margin: -0.6px -0.3px;
@@ -187,8 +189,8 @@ form {
     transform-origin: top left;
     transform: translateY(0.15px);
     box-shadow: 0.3px 0px 0.75px 0.15px hsla(18, 77%, 15%, 0.05),
-                0px 1.5px 1.5px 0.15px hsla(18, 77%, 15%, 0.2),
-                -0.45px 0px 0.45px 0.15px hsla(0, 0%, 0%, 0.75);
+        0px 1.5px 1.5px 0.15px hsla(18, 77%, 15%, 0.2),
+        -0.45px 0px 0.45px 0.15px hsla(0, 0%, 0%, 0.75);
     transition: all 0.85s ease-in-out;
     background-size: cover;
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3"%3E%3Crect width="5" height="3" fill="%23ffce00"/%3E%3Crect width="5" height="1" y="2" fill="%23d00"/%3E%3Crect width="5" height="1" fill="%23000"/%3E%3C/svg%3E');
@@ -244,6 +246,7 @@ form {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
 /* Here */
 .toggle__sphere-bg:before {
     background-color: hsla(213, 83%, 26%, 1);
@@ -270,18 +273,19 @@ input:checked+.toggle__bg {
 input:checked+.toggle__bg .toggle__sphere {
     transform: translateX(37.5px) translateY(0.15px);
     box-shadow: -0.3px 0px 0.75px 0.15px hsla(18, 77%, 15%, 0.05),
-                0px 1.5px 1.5px 0.15px hsla(18, 77%, 15%, 0.2),
-                0.45px 0px 0.45px 0px hsla(0, 0%, 0%, 0.75);
-                background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 30%22%3E%3CclipPath id=%22t%22%3E%3Cpath d=%22M30,15v15H0V15H30zM30,15V0H0V15H30zM30,15v15H60V15H30zM30,15V0H60V15H30z%22/%3E%3C/clipPath%3E%3Cpath d=%22M0,0v30h60V0H0z%22 fill=%22%2300247D%22/%3E%3Cpath d=%22M0,0L60,30M60,0L0,30%22 stroke=%22%23FFF%22 stroke-width=%226%22/%3E%3Cpath d=%22M0,0L60,30M60,0L0,30%22 clip-path=%22url(%23t)%22 stroke=%22%23CF142B%22 stroke-width=%224%22/%3E%3Cpath d=%22M30,0v30M0,15h60%22 stroke=%22%23FFF%22 stroke-width=%2210%22/%3E%3Cpath d=%22M30,0v30M0,15h60%22 stroke=%22%23CF142B%22 stroke-width=%226%22/%3E%3C/svg%3E');
+        0px 1.5px 1.5px 0.15px hsla(18, 77%, 15%, 0.2),
+        0.45px 0px 0.45px 0px hsla(0, 0%, 0%, 0.75);
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 30%22%3E%3CclipPath id=%22t%22%3E%3Cpath d=%22M30,15v15H0V15H30zM30,15V0H0V15H30zM30,15v15H60V15H30zM30,15V0H60V15H30z%22/%3E%3C/clipPath%3E%3Cpath d=%22M0,0v30h60V0H0z%22 fill=%22%2300247D%22/%3E%3Cpath d=%22M0,0L60,30M60,0L0,30%22 stroke=%22%23FFF%22 stroke-width=%226%22/%3E%3Cpath d=%22M0,0L60,30M60,0L0,30%22 clip-path=%22url(%23t)%22 stroke=%22%23CF142B%22 stroke-width=%224%22/%3E%3Cpath d=%22M30,0v30M0,15h60%22 stroke=%22%23FFF%22 stroke-width=%2210%22/%3E%3Cpath d=%22M30,0v30M0,15h60%22 stroke=%22%23CF142B%22 stroke-width=%226%22/%3E%3C/svg%3E');
 }
 
 input:checked+.toggle__bg .toggle__sphere-bg {
     transform: rotateY(180deg);
 }
+
 /* Language Toggle End */
 
 /* Call to Action start */
-#actionBtn{
+#actionBtn {
     position: fixed;
     top: 40px;
     /* Put it in the middle */
@@ -383,7 +387,7 @@ input:checked+.toggle__bg .toggle__sphere-bg {
 .btn::before {
     content: "";
     background: linear-gradient(45deg,
-    #D8C278, #635e4b, #26200b, #7067bb,
+            #D8C278, #635e4b, #26200b, #7067bb,
             #57789D, #002BFF, #3d3187, #7f8cc1);
     position: absolute;
     top: -2px;
@@ -431,7 +435,7 @@ input:checked+.toggle__bg .toggle__sphere-bg {
     height: 80%;
     padding: 20px;
 
-    
+
 
 }
 
@@ -441,7 +445,7 @@ input:checked+.toggle__bg .toggle__sphere-bg {
     /* Use verdana as a font  */
     font-family: 'Verdana', sans-serif;
     color: #829dbb;
-    
+
 }
 
 /* Home Content Start */
@@ -450,46 +454,48 @@ section {
     place-items: center;
     align-content: center;
     min-height: 100vh;
-  }
+}
 
 .hidden {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100px);
     transition: all 3s;
-  }
+}
 
-  @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
     .hidden {
-      transition: none;
+        transition: none;
     }
-  }
+}
 
-  .showHome {
+.showHome {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-  }
+}
 
-  .line {
+.line {
     padding: 10px;
-  }
+}
 
-  .charts {
+.charts {
     display: flex;
-  }
+}
 
-  .chart:nth-child(2) {
+.chart:nth-child(2) {
     transition-delay: 200ms;
-  }
-  .chart:nth-child(3) {
-    transition-delay: 400ms;
-  }
-  .chart:nth-child(4) {
-    transition-delay: 600ms;
-  }
+}
 
-  .chart {
+.chart:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.chart:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.chart {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 1px;
@@ -497,14 +503,16 @@ section {
     width: 90px;
     height: 120px;
     transition: 1s;
-  }
-  .chart:hover {
-      /* Create height that is always 75% of screen height and width is always 3/4 of height*/
+}
+
+.chart:hover {
+    /* Create height that is always 75% of screen height and width is always 3/4 of height*/
     height: 75vh;
     width: 56.25vh;
 
-        transition: 1s;
-  }
+    transition: 1s;
+}
+
 /* Home Content End */
 
 
@@ -525,13 +533,26 @@ section {
         left: auto;
         transform: none;
     }
+
     #actionBtn {
         position: fixed;
         right: 1px;
         left: auto;
         transform: none;
     }
-    .social-button{
+
+    .social-button {
         width: 9rem;
+    }
+
+    .charts {
+        display: flex;
+        flex-direction: column;
+    }
+    .chart:hover {
+        /* Create height that is always 65% of screen height and width is always 3/4 of height*/
+        height: 65vh;
+        width: 48.75vh;
+        transition: 1s;
     }
 }
