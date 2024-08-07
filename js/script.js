@@ -88,8 +88,8 @@ function navbar(cssExport) {
     const navButtons = [
         '<a href="#home"><i class="lni lni-home"></i></a>',
         '<a href="#about"><i class="lni lni-information"></i></a>',
-        '<a><i class="lni lni-download"></i></a>',
-        '<a><i class="lni lni-envelope"></i></a>',
+        '<a href="#downloads"><i class="lni lni-download"></i></a>',
+        '<a href="#contact"><i class="lni lni-envelope"></i></a>',
         '<button id="showNav"><i class="lni lni-menu"></i></button>'
     ];
 

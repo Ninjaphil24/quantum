@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const routes = {
         '#home': 'views/home.html',
-        '#about': 'about.html',
-        '#contact': 'contact.html',
+        '#about': 'views/about.html',
+        '#downloads': 'views/downloads.html',
+        '#contact': 'views/contact.html',
     };
 
     async function loadContent() {
