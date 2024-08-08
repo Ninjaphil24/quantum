@@ -551,9 +551,9 @@ section {
     }
 
     .chart:hover {
-        /* Create height that is always 65% of screen height and width is always 3/4 of height*/
-        height: 65vh;
-        width: 48.75vh;
+        /* Create height that is always 50% of screen height and width is always 3/4 of height*/
+        height: 50vh;
+        width: 37.5vh;
         transition: 1s;
     }
 }
