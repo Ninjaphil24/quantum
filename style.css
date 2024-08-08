@@ -561,7 +561,10 @@ section {
 /* Contact start */
 #form {
     flex-direction: column;
-}
+    max-width: 600px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);}
 
 #form h3 {
     color: #D8C278;
@@ -574,11 +577,13 @@ section {
 #form #getintouch {
     border: none;
     text-decoration: none;
+    width: 200px;
     font-family: 'MBFCannoRegular', sans-serif;
     font-size: 17px;
     color: #D8C278;
     padding: 15px;
     background-color: #57789D;
+    align-self: center;
 }
 
 #form #getintouch:hover {
@@ -608,6 +613,7 @@ section {
     opacity: 0.8;
     height: 37px;
     width: 100%;
+    color: #d1f3f5;
     background-color: rgb(76, 148, 242);    
 }
 
@@ -644,6 +650,7 @@ section {
     margin-bottom: 20px;
     height: 150px;
     width: 100%;
+    color: #d1f3f5;
     background: rgb(76, 148, 242);    
 }
 
