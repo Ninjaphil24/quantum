@@ -258,6 +258,7 @@ p {
     transform: rotateY(180deg);
     border-radius: 50%;
 }
+
 /* Language switch */
 /* input {
     opacity: 0;
@@ -515,6 +516,39 @@ section {
 
 /* Home Content End */
 
+/* About Content Start */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #D8C278;
+}
+
+#about h3 {
+    font-size: 3rem;
+    margin: 20px;
+    padding: 0;
+}
+
+#about p {
+    font-size: 1rem;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+#about iframe {
+    /* width: 560;
+    height: 315; */
+    width: 900px;
+    height: 506px;
+
+
+}
+
+/* About Content End */
+
 /* Downlads Content Start */
 
 #downloads {
@@ -556,6 +590,7 @@ section {
     border: 1px solid #D8C278;
     color: #57789D;
 }
+
 /* Downlads Content End */
 
 /* Contact start */
@@ -564,7 +599,8 @@ section {
     max-width: 600px;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);}
+    transform: translateX(-50%);
+}
 
 #form h3 {
     color: #D8C278;
@@ -614,7 +650,7 @@ section {
     height: 37px;
     width: 100%;
     color: #d1f3f5;
-    background-color: rgb(76, 148, 242);    
+    background-color: rgb(76, 148, 242);
 }
 
 .error {
@@ -651,7 +687,7 @@ section {
     height: 150px;
     width: 100%;
     color: #d1f3f5;
-    background: rgb(76, 148, 242);    
+    background: rgb(76, 148, 242);
 }
 
 #form ul li textarea::placeholder {
@@ -714,5 +750,11 @@ section {
         width: 37.5vh;
         transition: 1s;
     }
-}
 
+    #about iframe {
+        /* width: 560;
+        height: 315; */
+        width: 300px;
+        height: 169px;
+    }
+}
