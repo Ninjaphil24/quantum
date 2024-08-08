@@ -515,48 +515,48 @@ section {
 
 /* Home Content End */
 
+/* Downlads Content Start */
 
-/* Content End */
-
-/* Write a media query for 650px width where .btn will be 10px */
-@media (max-width: 650px) {
-    .btn {
-        font-size: 12px;
-    }
+#downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #D8C278;
 }
 
-
-@media (max-width: 500px) {
-    #scroll {
-        position: fixed;
-        right: 23px;
-        left: auto;
-        transform: none;
-    }
-
-    #actionBtn {
-        position: fixed;
-        right: 1px;
-        left: auto;
-        transform: none;
-    }
-
-    .social-button {
-        width: 9rem;
-    }
-
-    .charts {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .chart:hover {
-        /* Create height that is always 50% of screen height and width is always 3/4 of height*/
-        height: 50vh;
-        width: 37.5vh;
-        transition: 1s;
-    }
+#downloads h3 {
+    font-size: 3rem;
+    margin: 20px;
+    padding: 0;
 }
+
+#downloads p {
+    font-size: 1rem;
+    margin: 20px;
+    padding: 0;
+}
+
+#downloads a {
+    border: none;
+    text-decoration: none;
+    width: 200px;
+    font-family: 'MBFCannoRegular', sans-serif;
+    font-size: 17px;
+    color: #D8C278;
+    padding: 15px;
+    background-color: #57789D;
+    align-self: center;
+    text-align: center;
+}
+
+#downloads a:hover {
+    cursor: pointer;
+    background-color: #D8C278;
+    border: 1px solid #D8C278;
+    color: #57789D;
+}
+/* Downlads Content End */
 
 /* Contact start */
 #form {
@@ -674,3 +674,45 @@ section {
 }
 
 /* Contact end */
+/* Content End */
+
+/* Write a media query for 650px width where .btn will be 10px */
+@media (max-width: 650px) {
+    .btn {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    #scroll {
+        position: fixed;
+        right: 23px;
+        left: auto;
+        transform: none;
+    }
+
+    #actionBtn {
+        position: fixed;
+        right: 1px;
+        left: auto;
+        transform: none;
+    }
+
+    .social-button {
+        width: 9rem;
+    }
+
+    .charts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chart:hover {
+        /* Create height that is always 50% of screen height and width is always 3/4 of height*/
+        height: 50vh;
+        width: 37.5vh;
+        transition: 1s;
+    }
+}
+
