@@ -24,14 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             contentDiv.innerHTML = '<h1>Error loading page</h1>';
         }
-        setContent();
+        // setContent();
     }
 
     function executeInlineScripts(container) {
         const scripts = container.querySelectorAll('script');
         scripts.forEach((script) => {
             const newScript = document.createElement('script');
-            newScript.textContent = script.textContent;
+            newScript.textContent = `
+                if (typeof observer === 'undefined') {
+                    ${script.textContent}
+                }
+            `;
             document.head.appendChild(newScript).parentNode.removeChild(newScript);
         });
     }

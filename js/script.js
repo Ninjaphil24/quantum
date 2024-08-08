@@ -86,7 +86,7 @@ function navbar(cssExport) {
     let finalCss = '';
     const circleCount = 5;
     const navButtons = [
-        '<a href="/"><i class="lni lni-home"></i></a>',
+        '<a href="#home"><i class="lni lni-home"></i></a>',
         '<a href="#about"><i class="lni lni-information"></i></a>',
         '<a href="#downloads"><i class="lni lni-download"></i></a>',
         '<a href="#contact"><i class="lni lni-envelope"></i></a>',
