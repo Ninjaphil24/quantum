@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             contentDiv.innerHTML = '<h1>Error loading page</h1>';
         }
-        // setContent();
+        setContent();
     }
 
     function executeInlineScripts(container) {
