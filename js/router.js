@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '#about': 'views/about.html',
         '#downloads': 'views/downloads.html',
         '#contact': 'views/contact.html',
+        '#thank_you': 'views/thank_you.html',
     };
 
     async function loadContent() {

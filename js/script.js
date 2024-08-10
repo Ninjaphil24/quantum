@@ -86,10 +86,10 @@ function navbar(cssExport) {
     let finalCss = '';
     const circleCount = 5;
     const navButtons = [
-        '<a href="#home"><i class="lni lni-home"></i></a>',
-        '<a href="#about"><i class="lni lni-information"></i></a>',
-        '<a href="#downloads"><i class="lni lni-download"></i></a>',
-        '<a href="#contact"><i class="lni lni-envelope"></i></a>',
+        '<a href="#home"><abbr title="Home"><i class="lni lni-home"></i></abbr></a>',
+        '<a href="#about"><abbr title="About"><i class="lni lni-information"></i></abbr></a>',
+        '<a href="#downloads"><abbr title="Downloads"><i class="lni lni-download"></i></abbr></a>',
+        '<a href="#" id="contact"><abbr title="Contact"><i class="lni lni-envelope"></i></abbr></a>',
         '<button id="showNav"><i class="lni lni-menu"></i></button>'
     ];
 
@@ -117,7 +117,7 @@ function navbar(cssExport) {
         const x = Math.cos(angle * Math.PI / 180) * radius;
         const y = Math.sin(angle * Math.PI / 180) * radius;
         finalCss += `
-            #nav0.show .circle${i} { top: ${42 + y}%; left: ${15 + x}%; transform: translate(-50%, -50%); }
+            #nav0.show .circle${i} { top: ${43 + y}%; left: ${15 + x}%; transform: translate(-50%, -50%); }
         `;
     }
 

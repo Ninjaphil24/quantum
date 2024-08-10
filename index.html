@@ -44,11 +44,78 @@
         </div>
     </div>
     <div id="content"></div>
+    <div class="formContainer inactive">
 
+        <form id="form" class="flex" action="https://formspree.io/f/xoqrjvve" method="post">
+            <h3>CONTACT</h3>
+            <ul>
+                <li>
+                    <input type="text" id="name" name="user_name" placeholder="Full name:" required maxlength="50">
+                    <div>
+                        <hr>
+                    </div>
+                </li>
+                <li>
+                    <input type="email" id="mail" name="user_email" placeholder="E-mail address:" required
+                        maxlength="50">
+                    <small id="error"></small>
+                    <div>
+                        <hr>
+                    </div>
+                </li>
+                <li>
+                    <textarea id="msg" name="user_message" placeholder="Enter text here" required
+                        maxlength="1000"></textarea>
+                </li>
+            </ul>
+            <button id="getintouch" type="submit" name="submit" value="Get in touch">SEND MESSAGE</button>
+        </form>
+    </div>
+
+    <div class="thankYouContainer inactive flex">
+        <h3>THANK YOU, YOUR MESSAGE HAS BEEN RECEIVED.</h3>
+        <button id="thankYouClose">CLOSE</button>
+    </div>
     <script src="https://apis.google.com/js/platform.js"></script>
     <script src="js/script.js"></script>
     <script src="js/router.js"></script>
     <script src="js/lang.js"></script>
+    <script>
+        document.getElementById('contact').addEventListener('click', function () {
+            document.querySelector('.formContainer').classList.toggle('inactive');
+        })
+
+        document.getElementById('form').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    headers: {
+                        'Accept': 'application/json'
+                    },
+                    body: formData
+                });
+
+                if (response.ok) {
+                    document.querySelector('.formContainer').classList.toggle('inactive');
+                    document.querySelector('.thankYouContainer').classList.toggle('inactive');
+                } else {
+                    const errorData = await response.json();
+                    alert('There was an error submitting the form: ' + errorData.message);
+                }
+            } catch (error) {
+                alert('An error occurred while submitting the form. Please try again later.');
+            }
+        });
+        document.getElementById('thankYouClose').addEventListener('click', function () {
+            document.querySelector('.thankYouContainer').classList.toggle('inactive');
+        })
+
+    </script>
 </body>
 
 </html>
