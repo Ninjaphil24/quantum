@@ -593,6 +593,11 @@ section {
 /* Downlads Content End */
 
 /* Contact start */
+#contact {
+    cursor: pointer;
+    color: #152878;
+}
+
 .formContainer {
     position: fixed;
     width: 600px;

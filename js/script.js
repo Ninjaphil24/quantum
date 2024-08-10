@@ -89,7 +89,7 @@ function navbar(cssExport) {
         '<a href="#home"><abbr title="Home"><i class="lni lni-home"></i></abbr></a>',
         '<a href="#about"><abbr title="About"><i class="lni lni-information"></i></abbr></a>',
         '<a href="#downloads"><abbr title="Downloads"><i class="lni lni-download"></i></abbr></a>',
-        '<a href="#" id="contact"><abbr title="Contact"><i class="lni lni-envelope"></i></abbr></a>',
+        '<a id="contact"><abbr title="Contact"><i class="lni lni-envelope"></i></abbr></a>',
         '<button id="showNav"><i class="lni lni-menu"></i></button>'
     ];
 
