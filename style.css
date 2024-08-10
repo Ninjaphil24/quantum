@@ -798,8 +798,14 @@ section {
         transform: none;
     }
 
-    .formContainer {
+    .formContainer,
+    .thankYouContainer {
         width: 100%;
+    }
+
+    .thankYouContainer {
+        font-size: 1rem;
+        text-align: center;
     }
 
     .social-button {
