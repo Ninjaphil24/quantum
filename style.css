@@ -736,7 +736,8 @@ section {
     padding: 10px;
 }
 
-#thankYouClose {
+#thankYouClose,
+#contactClose {
     border: none;
     text-decoration: none;
     width: 200px;
@@ -744,11 +745,14 @@ section {
     font-size: 17px;
     color: #D8C278;
     padding: 15px;
+    margin: 15px;
     background-color: #57789D;
     cursor: pointer;
+    align-self: center;
 }
 
-#thankYouClose:hover {
+#thankYouClose:hover,
+#contactClose:hover {
     background-color: #D8C278;
     border: 1px solid #D8C278;
     color: #57789D;
