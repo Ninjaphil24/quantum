@@ -570,7 +570,8 @@ section {
     padding: 0;
 }
 
-#downloads a {
+#downloads a,
+#about a {
     border: none;
     text-decoration: none;
     width: 200px;
@@ -583,7 +584,8 @@ section {
     text-align: center;
 }
 
-#downloads a:hover {
+#downloads a:hover,
+#about a:hover {
     cursor: pointer;
     background-color: #D8C278;
     border: 1px solid #D8C278;
